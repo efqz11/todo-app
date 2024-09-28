@@ -1,4 +1,4 @@
-const API_URL = 'https://thequoteapi.com/api/quotes/random/';
+const API_URL = 'https://thequoteapi.com/api/quotes/random';
 
 export const fetchRandomQuote = async () => {
     const response = await fetch(API_URL, {
