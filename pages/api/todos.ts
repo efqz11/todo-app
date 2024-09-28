@@ -7,10 +7,6 @@ import { getServerSession } from "next-auth";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
         const session = await getServerSession(req, res, authOptions);
-        console.log(">> logging request");
-        console.log("session==", session);
-        console.log("req.method==", req.method);
-        console.log('Cookies:', req.cookies);
 
         // Ensure the user is authenticated
         if (!session?.user?.email) {
