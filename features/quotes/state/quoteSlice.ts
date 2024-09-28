@@ -12,6 +12,6 @@ export const useQuoteStore = create<QuoteState>((set) => ({
   author: '',
   getRandomQuote: async () => {
     const data = await fetchRandomQuote();
-    set({ quote: data.content, author: data.author });
+    set({ quote: data.text, author: data.author });
   },
 }));
